@@ -1,5 +1,5 @@
-const versionSW = '{{version}}';
-const staticCacheName = 'staticfiles' + versionSW;
+const version = '{{version}}';
+const staticCacheName = 'staticfiles__' + version;
 const imageCacheName = 'images';
 const pagesCacheName = 'pages';
 const cacheList = [

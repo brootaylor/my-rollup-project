@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run scripts && npm run static && npm run root",
-    "server": "http-server -P http://localhost:8080/dist/ -g -o -c-1",
+    "server": "http-server -P http://localhost:8080/dist/ -S -g -o -c-1",
     "scripts": "npx rollup -c",
     "static": "rsync -rm src/static dist",
     "root": "rsync -rm src/index.html src/favicon.ico dist"
