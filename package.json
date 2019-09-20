@@ -7,7 +7,7 @@
     "server": "http-server ./dist -g -o -c-1",
     "scripts": "npx rollup -c",
     "static": "rsync -rm src/static src/offline dist",
-    "root": "rsync -rm src/index.html src/favicon.ico dist"
+    "root": "rsync -rm src/*.html src/favicon.ico dist"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
