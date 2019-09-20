@@ -1,14 +1,17 @@
 {
   "name": "rollup-tutorial",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "build": "rollup -c"
+    "build": "npm run scripts && npm run static",
+    "server": "http-server -g -o -c-1",
+    "scripts": "npx rollup -c",
+    "static": "rsync -rm src/static dist"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
+    "http-server": "^0.11.1",
     "rimraf": "^3.0.0",
     "rollup": "^1.21.4",
     "rollup-plugin-babel": "^4.3.3",

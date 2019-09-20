@@ -1,4 +1,4 @@
-const versionSW = 'App__{{version}}';
+const versionSW = '{{version}}';
 const staticCacheName = 'staticfiles' + versionSW;
 const imageCacheName = 'images';
 const pagesCacheName = 'pages';

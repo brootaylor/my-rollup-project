@@ -37,6 +37,10 @@ const pluginsOptB = [
 
 const pluginsOptC = [
     json(),
+    replace({
+        delimiters: ['{{', '}}'],
+        version
+    }),
     resolve(),
     commonjs()
 ];
