@@ -7,7 +7,7 @@ const cacheList = [
 	imageCacheName,
 	pagesCacheName
 ];
-const offlinePageGlobal = 'offline/index.html';
+const offlinePageGlobal = './offline/index.html';
 const offlinePages = [
 	'/'
 ];
@@ -16,12 +16,12 @@ function updateStaticCache() {
 	return caches.open(staticCacheName).then(staticCache => {
 		// These files don't block installation
 		staticCache.addAll([
-			'images/logo.svg'
+			'./static/images/logo.svg'
 		].concat(offlinePages));
 		// These files must be cached for installation
 		return staticCache.addAll([
 			// Static assets to use offline...
-			'../scripts/main.js',
+			'./scripts/main.js',
 			// Offline page document...
 			offlinePageGlobal
 		]);

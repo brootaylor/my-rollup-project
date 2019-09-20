@@ -1,12 +1,12 @@
 {
   "name": "rollup-tutorial",
-  "version": "1.1.2",
+  "version": "1.1.0",
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run scripts && npm run static && npm run root",
-    "server": "http-server -P http://localhost:8080/dist/ -S -g -o -c-1",
+    "server": "http-server ./dist -g -o -c-1",
     "scripts": "npx rollup -c",
-    "static": "rsync -rm src/static dist",
+    "static": "rsync -rm src/static src/offline dist",
     "root": "rsync -rm src/index.html src/favicon.ico dist"
   },
   "devDependencies": {
