@@ -10,8 +10,10 @@ Using commands like the following to automatically update / change the `package.
 * `npm version minor`
 * `npm version patch`
 
+---
+
 To make the `git commit` more meaningful, add a *message* to the version `major`, `minor` or `patch`.
 
-Something like this...
+**Something like this...**
 
-`npm version patch -m "Upgraded to version %s. Updated the service worker"`
+`npm version patch -m "Upgraded to version %s. Updated the service worker."`
