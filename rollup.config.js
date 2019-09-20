@@ -1,12 +1,23 @@
 // rollup.config.js
 import json from 'rollup-plugin-json';
+import replace from 'rollup-plugin-replace';
+import rimraf from 'rimraf';
 import { terser } from "rollup-plugin-terser";
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 
+rimraf.sync('dist');
+
+const pkg = require('./package.json');
+const version = pkg.version
+
 const pluginsOptA = [
     json(),
+    replace({
+        delimiters: ['{{', '}}'],
+        version
+    }),
     terser(),
     resolve(),
     commonjs(),

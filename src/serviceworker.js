@@ -1,6 +1,4 @@
-import { version } from '../package.json';
-
-const versionSW = 'v' + version + '.2019.09.16';
+const versionSW = 'App__{{version}}';
 const staticCacheName = 'staticfiles' + versionSW;
 const imageCacheName = 'images';
 const pagesCacheName = 'pages';

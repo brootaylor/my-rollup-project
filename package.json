@@ -1,6 +1,6 @@
 {
   "name": "rollup-tutorial",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
@@ -15,6 +15,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.1.2",
     "systemjs": "^6.1.1"
   },
