@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run scripts && npm run static",
-    "server": "http-server -g -o -c-1",
+    "server": "http-server -S -g -o -c-1",
     "scripts": "npx rollup -c",
     "static": "rsync -rm src/static dist"
   },
