@@ -3,10 +3,11 @@
   "version": "0.1.1",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run scripts && npm run static",
-    "server": "http-server -S -g -o -c-1",
+    "build": "npm run scripts && npm run static && npm run root",
+    "server": "http-server -P http://localhost:8080/dist/ -g -o -c-1",
     "scripts": "npx rollup -c",
-    "static": "rsync -rm src/static dist"
+    "static": "rsync -rm src/static dist",
+    "root": "rsync -rm src/index.html src/favicon.ico dist"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

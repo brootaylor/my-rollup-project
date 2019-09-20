@@ -1,5 +1,5 @@
 // src/main.js
-import { version } from '../package.json';
+import { version } from '../../package.json';
 import answer from 'the-answer';
 import foo from './modules/foo.js';
 import bar from './modules/foo.js';

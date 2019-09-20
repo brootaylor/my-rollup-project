@@ -28,6 +28,10 @@ const pluginsOptA = [
 
 const pluginsOptB = [
     json(),
+    replace({
+        delimiters: ['{{', '}}'],
+        version
+    }),
     resolve(),
     commonjs(),
     babel({
@@ -47,7 +51,7 @@ const pluginsOptC = [
 
 export default [
     {
-        input: './src/main.js',
+        input: './src/scripts/main.js',
         output: [
             // "iife" format for use in the browser
             {
@@ -86,7 +90,7 @@ export default [
         output: [
             {
                 dir: 'dist',
-                format: 'iife',
+                format: 'cjs',
             }
         ],
         plugins: pluginsOptC

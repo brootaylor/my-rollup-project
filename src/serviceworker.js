@@ -7,18 +7,8 @@ const cacheList = [
 	imageCacheName,
 	pagesCacheName
 ];
-const offlinePageGlobal = '/offline/index.php';
+const offlinePageGlobal = 'offline/index.html';
 const offlinePages = [
-	'/writing/2019-05-10/journal_01',
-	'/writing/2019-04-11/a-frontend-muddle',
-	'/writing/2019-03-15/my-frontend-resources-2019',
-	'/writing/2019-01-02/static-site-generator-quandary',
-	'/writing/2018-05-01/blood-skin-tech-wizardry',
-	'/writing/2016-10-15/reset',
-	'/writing/2014-10-16/escaping-the-pickling-jar',
-	'/notes/',
-	'/links/',
-	'/about',
 	'/'
 ];
 
@@ -26,15 +16,12 @@ function updateStaticCache() {
 	return caches.open(staticCacheName).then(staticCache => {
 		// These files don't block installation
 		staticCache.addAll([
-			'/static/img/icons/external.svg',
-			'/static/img/personal-ramblings/pickling-jar.png',
-			'/static/docs/cv/BruceTaylorCV.pdf'
+			'images/logo.svg'
 		].concat(offlinePages));
 		// These files must be cached for installation
 		return staticCache.addAll([
 			// Static assets to use offline...
-			'/static/css/screen.css',
-			'/static/js/scripts.js',
+			'../scripts/main.js',
 			// Offline page document...
 			offlinePageGlobal
 		]);
