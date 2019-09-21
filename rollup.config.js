@@ -7,7 +7,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 
-rimraf.sync('dist');
+//rimraf.sync('dist');
 
 const pkg = require('./package.json');
 const version = pkg.version

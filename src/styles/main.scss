@@ -1,0 +1,25 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    line-height: 1.44;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p,
+a {
+    font-size: 1.8rem;
+}
+
+.foo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .bar {
+        flex: 1 1 auto;
+    }
+}
