@@ -1,6 +1,8 @@
 # A RollupJS project
 
-Nothing fancy really. Just a bit of a play around and familiarising myself on how to set up a possible RollupJS config. Also some SCSS, static file copying and service worker versioning snuck it's way in as well. 😉
+Nothing fancy really. A bit of a play around and trying to familiarise myself on how to set up a possible RollupJS config.
+
+Also some SCSS, static file copying and service worker versioning snuck its way in as well. 😉
 
 ## What it does
 
