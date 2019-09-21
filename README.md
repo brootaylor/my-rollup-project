@@ -4,8 +4,6 @@ Nothing fancy really. Just a bit of a play around and familiarosation of how to 
 
 ## What it does
 
----
-
 ### `"prebuild": "npm run clean"`
 
 `prebuild` runs the `clean` command script that removes the `dist` directory and all its contents. It *automatically runs* before running the scripts within the `build` script.
