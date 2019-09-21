@@ -23,11 +23,11 @@ Nothing fancy really. Just a bit of a play around and familiarosation of how to 
 Using commands like the following to automatically update / change the `package.json` *version* number...
 
 * `npm version major`
-  * eg. *__1__.0.0*
+  * eg. __*1*__.0.0
 * `npm version minor`
-  * eg. *1.__1__.0*
+  * eg. 1.__*1*__.0
 * `npm version patch`
-  * eg. *1.0.__1__*
+  * eg. 1.0.__*1*__
 
 ---
 
