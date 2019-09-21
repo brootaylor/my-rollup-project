@@ -4,17 +4,30 @@ Nothing fancy really. Just a bit of a play around and familiarosation of how to 
 
 ## What it does
 
+---
+
 ### `"prebuild": "npm run clean"`
 
-This script automatically runs *just* before running `npm run build`.
+`prebuild` runs the `clean` command script that removes the `dist` directory and all its contents. It *automatically runs* before running the scripts within the `build` script.
 
-## Versioning
+---
+
+### `"build": "npm run scripts && npm run styles && npm run static"`
+
+`build` runs the `scripts`, `styles` and `static` command scripts.
+
+---
+
+## Versioning method
 
 Using commands like the following to automatically update / change the `package.json` *version* number...
 
 * `npm version major`
+  * eg. *_1_.0.0*
 * `npm version minor`
+  * eg. *1._1_.0*
 * `npm version patch`
+  * eg. *1.0._1_*
 
 ---
 
