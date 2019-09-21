@@ -1,10 +1,11 @@
 // rollup.config.js
 import json from 'rollup-plugin-json';
 import replace from 'rollup-plugin-replace';
-import rimraf from 'rimraf';
+// import rimraf from 'rimraf';
 import { terser } from "rollup-plugin-terser";
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import OMT from "@surma/rollup-plugin-off-main-thread";
 import babel from 'rollup-plugin-babel';
 
 //rimraf.sync('dist');
@@ -20,7 +21,7 @@ const pluginsOptA = [
         name,
         version
     }),
-    terser(),
+    //terser(),
     resolve(),
     commonjs(),
     babel({
@@ -28,6 +29,7 @@ const pluginsOptA = [
     })
 ];
 
+// "AMD" format uses the "OMT" plugin
 const pluginsOptB = [
     json(),
     replace({
@@ -35,13 +37,15 @@ const pluginsOptB = [
         name,
         version
     }),
+    //terser(),
     resolve(),
-    commonjs(),
+    OMT(),
     babel({
         exclude: 'node_modules/**' // only transpile our source code
     })
 ];
 
+// Used for serviceworker.js in this instance
 const pluginsOptC = [
     json(),
     replace({
@@ -50,7 +54,7 @@ const pluginsOptC = [
         version
     }),
     resolve(),
-    commonjs()
+    commonjs(),
 ];
 
 export default [
@@ -85,6 +89,18 @@ export default [
             }
         ],
         plugins: pluginsOptA
+    },
+    {
+        // "AMD" format uses the "OMT" plugin
+        input: './src/scripts/main.js',
+        output: [
+            {
+                dir: 'dist/scripts/main.amd',
+                format: 'amd',
+                sourcemap: true,
+            }
+        ],
+        plugins: pluginsOptB
     },
     {
         // Me trying to dynamically update the service worker version number
