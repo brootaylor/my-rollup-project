@@ -1,6 +1,6 @@
 # A RollupJS project
 
-Nothing fancy really. Just a bit of a play around and familiarosation of how to set up a possible RollupJS config. Blah dee blah!
+Nothing fancy really. Just a bit of a play around and familiarising myself on how to set up a possible RollupJS config. Also some SCSS, static file copying and service worker versioning snuck it's way in as well. 😉
 
 ## What it does
 
@@ -12,9 +12,13 @@ Nothing fancy really. Just a bit of a play around and familiarosation of how to 
 
 ### `"build": "npm run scripts && npm run styles && npm run static"`
 
-`build` runs the `scripts`, `styles` and `static` command scripts.
+`npm run build` runs the `scripts`, `styles` and `static` command scripts.
 
 ---
+
+## `"server": "http-server ./dist -g -o -c-1"`
+
+`npm run server` starts up a local sever - aka `http-server` - to run the web application in the browser. The `-g`, `-o` and `-c-1` options are to gzip, automatically run in the browser and prevent caching, respectively.
 
 ## Versioning method
 
