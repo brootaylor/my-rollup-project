@@ -10,12 +10,14 @@ import babel from 'rollup-plugin-babel';
 //rimraf.sync('dist');
 
 const pkg = require('./package.json');
-const version = pkg.version
+const name = pkg.name;
+const version = pkg.version;
 
 const pluginsOptA = [
     json(),
     replace({
         delimiters: ['{{', '}}'],
+        name,
         version
     }),
     terser(),
@@ -30,6 +32,7 @@ const pluginsOptB = [
     json(),
     replace({
         delimiters: ['{{', '}}'],
+        name,
         version
     }),
     resolve(),
@@ -43,6 +46,7 @@ const pluginsOptC = [
     json(),
     replace({
         delimiters: ['{{', '}}'],
+        name,
         version
     }),
     resolve(),
