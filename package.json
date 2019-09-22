@@ -10,7 +10,8 @@
     "styles": "npm run scss && npm run autoprefixer",
     "scss": "node-sass --output-style compressed --source-map true -o dist/styles src/styles",
     "autoprefixer": "postcss -u autoprefixer --map --no-map -r dist/styles/*.css",
-    "static": "rsync -rm src/offline src/static src/*.html src/favicon.ico dist"
+    "static": "rsync -rm src/offline src/static src/*.html src/favicon.ico dist",
+    "debug": "DEBUG=* npx somethinghere"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
