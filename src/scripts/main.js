@@ -5,6 +5,8 @@ import foo from './modules/foo.js';
 import bar from './modules/foo.js';
 import { square } from './modules/maths.js';
 
+import embed from './modules/embed.js';
+
 // src/components/.../*.js
 import menu, { dropDown } from '../components/core/menu/menu.js'; // Daisy-chained default and specific function/s.
 
@@ -14,6 +16,9 @@ export default function () {
 
     console.log(foo);
     console.log(bar);
+
+    // A test script (not in console.log)
+    embed();
 
     // Functions from the menu.js
     console.log(menu);
