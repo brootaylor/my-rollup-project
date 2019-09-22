@@ -1,14 +1,18 @@
 // src/scripts/main.js
 import { version } from '../../package.json';
 import answer from 'the-answer';
-import foo from './modules/foo.js';
-import bar from './modules/foo.js';
-import { square } from './modules/maths.js';
 
-import embed from './modules/embed.js';
+// Utils
+import { square } from './utils/maths';
+import embed from './utils/embed';
+import smoothScroll from './utils/smoothScroll';
 
-// src/components/.../*.js
-import menu, { dropDown } from '../components/core/menu/menu.js'; // Daisy-chained default and specific function/s.
+// Modules
+import foo from './modules/foo';
+import bar from './modules/bar';
+
+// Components
+import menu, { dropDown } from '../components/core/menu/menu.js'; // Daisy-chained 'default' and specific exported functions.
 
 
 export default function () {
@@ -19,6 +23,8 @@ export default function () {
 
     // A test script (not in console.log)
     embed();
+
+    smoothScroll();
 
     // Functions from the menu.js
     console.log(menu);
