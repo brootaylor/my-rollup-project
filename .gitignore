@@ -1,2 +1,6 @@
-dist/
+# Directories / folder to ignore
+dist
 node_modules
+
+# Files to ignore
+.DS_Store
