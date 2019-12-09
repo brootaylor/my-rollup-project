@@ -36,6 +36,7 @@
     "systemjs": "^6.1.7"
   },
   "dependencies": {
+    "serialize-javascript": "^2.1.2",
     "the-answer": "^1.0.0"
   },
   "browserslist": [
