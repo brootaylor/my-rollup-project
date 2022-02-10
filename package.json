@@ -23,7 +23,7 @@
     "autoprefixer": "^9.8.2",
     "http-server": "^0.12.3",
     "jest": "^26.0.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "postcss-cli": "^7.1.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.18.0",
